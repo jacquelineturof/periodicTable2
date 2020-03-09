@@ -1,7 +1,8 @@
 import React from 'react'
 
-import colors from '../colors.module.css' // global colors file
+import '../colors.module.css'
 import classes from './Element.module.css'
+import { familyToColor } from '../shared/utility'
 
 export default function Element({ symbol, data, showInfo, closeInfo }) {
     let cssColor = ''
@@ -13,37 +14,7 @@ export default function Element({ symbol, data, showInfo, closeInfo }) {
 
     if (data) {
         const { type } = data
-        
-        switch(type) {
-            case ('Nonmetal'):
-                cssColor = colors.Red
-                break
-            case ('Noble Gas'):
-                cssColor = colors.Orange
-                break
-            case ('Alkali Metal'):
-                cssColor = colors.Yellow
-                break
-            case ('Alkaline Earth Metal'):
-                cssColor = colors.Green
-                break
-            case ('Metalloid'):
-                cssColor = colors.Blue
-                break
-            case ('Halogen'):
-                cssColor = colors.Pink
-                break
-            case ('Post-transition Metal'):
-                cssColor = colors.CarribeanGreen
-                break
-            case ('Transition Metal'):
-                cssColor = colors.Liberty
-                break
-            case ('Rare Earth Metal'):
-                cssColor = colors.GargoyleGas
-                break
-            default: cssColor = ''
-        }
+        cssColor = familyToColor(type)
     }
     
     return (

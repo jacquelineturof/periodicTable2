@@ -4,6 +4,7 @@ import Column from '../components/Column'
 import Legend from '../components/TableLengend'
 import Card from '../components/UI/Card'
 import FamilyCardInfo from '../components/FamilyCardInfo'
+import ElementCardInfo from '../components/ElementCardInfo'
 
 import { data } from '../data/data'
 
@@ -26,7 +27,7 @@ export default function PeriodicTable() {
     if (showElementInfo) {
         card = (
             <Card>
-                Element
+                <ElementCardInfo symbol = { showElementInfo } />
             </Card>
         )
     }

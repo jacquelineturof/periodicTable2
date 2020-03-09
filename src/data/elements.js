@@ -1,27 +1,57 @@
 export const elementData = {
     "H": {
         "type": "Nonmetal",
-        "atomicNumber": 1
+        "atomicNumber": 1,
+        "fullName": "Hydrogen",
+        "atomicMass": 1.008,
+        "oxidationStates": [
+            1, -1
+        ]
     },
     "He": {
         "type": "Noble Gas",
-        "atomicNumber": 2
+        "atomicNumber": 2,
+        "fullName": "Helium",
+        "atomicMass": 4.003,
+        "oxidationStates": [
+            0
+        ]
     },
     "Li": {
         "type": "Alkali Metal",
-        "atomicNumber": 3
+        "atomicNumber": 3,
+        "fullName": "Lithium",
+        "atomicMass": 6.941,
+        "oxidationStates": [
+            1, -1
+        ]
     },
     "Be": {
         "type": "Alkaline Earth Metal",
-        "atomicNumber": 4
+        "atomicNumber": 4,
+        "fullName": "Beryllium",
+        "atomicMass": 9.012,
+        "oxidationStates": [
+            2
+        ]
     },
     "B": {
         "type": "Metalloid",
-        "atomicNumber": 5
+        "atomicNumber": 5,
+        "fullName": "Boron",
+        "atomicMass": 10.811,
+        "oxidationStates": [
+            3, 2, 1
+        ]
     },
     "C": {
         "type": "Nonmetal",
-        "atomicNumber": 6
+        "atomicNumber": 6,
+        "fullName": "Carbon",
+        "atomicMass": 12.011,
+        "oxidationStates": [
+            4, 3, 2, 1, -2, -1, -4
+        ]
     },
     "N": {
         "type": "Nonmetal",
