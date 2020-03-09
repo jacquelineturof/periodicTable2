@@ -1,0 +1,33 @@
+.Legend {
+    height: 20%;
+    width: 45%;
+    position: absolute;
+    z-index: 1;
+    left: 15vw;
+    top: 10vh;
+}
+
+.Legend {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.LegendKey {
+    display: flex;
+    align-items: center;
+    width: 30%;
+    height: 15%;
+    cursor: pointer;
+}
+
+.Color {
+    height: 90%;
+    width: 25%;
+    margin: .5rem;
+}
+
+.Label {
+    width: 75%;
+}

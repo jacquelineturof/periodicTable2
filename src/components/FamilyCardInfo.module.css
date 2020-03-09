@@ -1,0 +1,21 @@
+.Container,
+.ControllerContainer {
+    width: 100%;
+}
+
+.Container {
+    height: 100%;
+    position: relative;
+    box-sizing: border-box;
+    border: 10px solid white;
+}
+
+.ControllerContainer {
+    position: absolute;
+    bottom: 0;
+    height: 20%;
+}
+
+.FamilyTag {
+    color: #4CB944;
+}

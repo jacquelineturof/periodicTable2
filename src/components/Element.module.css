@@ -1,0 +1,13 @@
+.ElementContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 10%;
+    width: 100%;
+    cursor: pointer;
+}
+
+.Label {
+    margin: 0;
+}
