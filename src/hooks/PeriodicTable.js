@@ -2,11 +2,13 @@ import React, { useState } from 'react'
 
 import Column from '../components/Column'
 import Legend from '../components/TableLengend'
+import BottomSeries from '../components/BottomSeries'
 import Card from '../components/UI/Card'
 import FamilyCardInfo from '../components/FamilyCardInfo'
 import ElementCardInfo from '../components/ElementCardInfo'
 
 import { data } from '../data/data'
+import { elementData } from '../data/elements'
 
 import classes from './PeriodicTable.module.css'
 
@@ -18,15 +20,23 @@ export default function PeriodicTable() {
 
     if (showLegendInfo) {
         card = (
-            <Card>
-                <FamilyCardInfo familyName = { showLegendInfo } />
+            <Card type = "mid">
+                <FamilyCardInfo 
+                    familyName = { showLegendInfo } />
             </Card>
         )
     }
 
     if (showElementInfo) {
+        // determines the position of the card on screen.
+        // Don't want the card placed over the element being
+        // hovered over.
+        const cardType = elementData[showElementInfo].type === 'Transition Metal'
+            ? 'end'
+            : 'mid'
+
         card = (
-            <Card>
+            <Card type = { cardType }>
                 <ElementCardInfo symbol = { showElementInfo } />
             </Card>
         )
@@ -45,6 +55,7 @@ export default function PeriodicTable() {
                     elements = { family.elements }
                     showInfo = { setElementInfo }
                     closeInfo = { () => setElementInfo('') } />)}
+            <BottomSeries />
         </div>
     )
 }

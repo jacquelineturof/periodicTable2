@@ -1,0 +1,7 @@
+.Container {
+    width: 70%;
+    height: 20%;
+    background-color: purple;
+    position: absolute;
+    bottom: 0;
+}
